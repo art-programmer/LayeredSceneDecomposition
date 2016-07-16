@@ -14,35 +14,24 @@ This code implements the algorithm described in our paper in C++.
 1. PCL
 2. gflags
 
-### Citing Faster R-CNN
+### Instruction
 
-If you find Faster R-CNN useful in your research, please consider citing:
+To compile the program:
 
-    @article{ren15fasterrcnn,
-        Author = {Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun},
-        Title = {{Faster R-CNN}: Towards Real-Time Object Detection with Region Proposal Networks},
-        Journal = {arXiv preprint arXiv:1506.01497},
-        Year = {2015}
-    }
+0. mkdir build
+1. cd build
+2. cmake ..
+3. make
 
-### Main Results
-                          | training data                          | test data            | mAP   | time/img
-------------------------- |:--------------------------------------:|:--------------------:|:-----:|:-----:
-Faster RCNN, VGG-16       | VOC 2007 trainval                      | VOC 2007 test        | 69.9% | 198ms
-Faster RCNN, VGG-16       | VOC 2007 trainval + 2012 trainval      | VOC 2007 test        | 73.2% | 198ms
-Faster RCNN, VGG-16       | VOC 2012 trainval                      | VOC 2012 test        | 67.0% | 198ms
-Faster RCNN, VGG-16       | VOC 2007 trainval&test + 2012 trainval | VOC 2012 test        | 70.4% | 198ms
+The command to run the program on your own data:
+./LayeredSceneDecomposition --image_path=*"your image path"* --point_cloud_path=*"your point cloud path"* --result_folder=*"where you want to save results"* --cache_folder=*"where you want to save cache"*
 
-**Note**: The mAP results are subject to random variations. We have run 5 times independently for ZF net, and the mAPs are 59.9 (as in the paper), 60.4, 59.5, 60.1, and 59.5, with a mean of 59.88 and std 0.39.
+The command to run the program on the demo data:
+./LayeredSceneDecomposition --image_path=../Input/image_01.txt --point_cloud_path=../Input/point_cloud_01.txt --result_folder=../Result --cache_folder=../Cache
 
+Point cloud format:
+The number in the first row equals to image_width * image_height.
+Then, each row stores 3D coordinates for a point which corresponds to a pixel (indexed by y * image_width + x).
 
-### Contents
-0. [Requirements: software](#requirements-software)
-0. [Requirements: hardware](#requirements-hardware)
-0. [Preparation for Testing](#preparation-for-testing)
-0. [Testing Demo](#testing-demo)
-0. [Preparation for Training](#preparation-for-training)
-0. [Training](#training)
-0. [Resources](#resources)
-
-
+### Contact
+If you have any questions, please contact me at chenliu@wustl.edu.
