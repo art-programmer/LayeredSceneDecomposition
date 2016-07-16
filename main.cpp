@@ -17,8 +17,11 @@
 using namespace std;
 using namespace cv;
 
-DEFINE_string(image_path, "", "Image path.");
-DEFINE_string(point_cloud_path, "", "Point cloud path.");
+DEFINE_string(image_path, "", "The path to the RGB image.");
+//Point cloud format:
+//The first number indicates the number equals to image_width * image_height.
+//Each row stores a 3D point for each pixel (ordered by y * image_width + x).
+DEFINE_string(point_cloud_path, "", "The path to the point cloud.");
 DEFINE_int32(num_layers, 4, "The number of layers.");
 
 
