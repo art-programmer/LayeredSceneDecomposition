@@ -23,11 +23,11 @@ To compile the program:
 2. cmake ..
 3. make
 
-The command to run the program on your own data:
+To run the program on your own data:
 
 ./LayeredSceneDecomposition --image_path=*"your image path"* --point_cloud_path=*"your point cloud path"* --result_folder=*"where you want to save results"* --cache_folder=*"where you want to save cache"*
 
-The command to run the program on the demo data:
+To run the program on the demo data:
 
 ./LayeredSceneDecomposition --image_path=../Input/image_01.txt --point_cloud_path=../Input/point_cloud_01.txt --result_folder=../Result --cache_folder=../Cache
 
