@@ -8,7 +8,7 @@ This paper proposes a novel layered depth map representation and its inference a
 
 This code implements the algorithm described in our paper in C++.
 
-### Requirements:
+### Requirements
 
 0. OpenCV
 1. PCL
@@ -24,14 +24,19 @@ To compile the program:
 3. make
 
 The command to run the program on your own data:
+
 ./LayeredSceneDecomposition --image_path=*"your image path"* --point_cloud_path=*"your point cloud path"* --result_folder=*"where you want to save results"* --cache_folder=*"where you want to save cache"*
 
 The command to run the program on the demo data:
+
 ./LayeredSceneDecomposition --image_path=../Input/image_01.txt --point_cloud_path=../Input/point_cloud_01.txt --result_folder=../Result --cache_folder=../Cache
 
-Point cloud format:
+Point cloud file format:
+
+The point cloud file stores a 3D point cloud, each of which corresponds to one image pixel.
 The number in the first row equals to image_width * image_height.
 Then, each row stores 3D coordinates for a point which corresponds to a pixel (indexed by y * image_width + x).
 
 ### Contact
+
 If you have any questions, please contact me at chenliu@wustl.edu.
