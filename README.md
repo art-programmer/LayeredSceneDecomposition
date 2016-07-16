@@ -4,7 +4,7 @@ By Chen Liu, Yasutaka Furukawa, and Pushmeet Kohli
 
 ### Introduction
 
-This paper proposes a novel layered depth map representation and its inference algorithm which is able to infer invisible surfaces behind occlusions. To learn more, please see our CVPR 2016 [paper](http://www.cse.wustl.edu/~furukawa/papers/2016-cvpr-layer.pdf) or visit our [project website](http://sites.wustl.edu/chenliu/LayeredScene)
+This paper proposes a novel layered depth map representation and its inference algorithm which is able to infer invisible surfaces behind occlusions. To learn more, please see our CVPR 2016 [paper](http://www.cse.wustl.edu/~furukawa/papers/2016-cvpr-layer.pdf) or visit our [project website](http://sites.wustl.edu/chenliu/layered-scene)
 
 This code implements the algorithm described in our paper in C++.
 
