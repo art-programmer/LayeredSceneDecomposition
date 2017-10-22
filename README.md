@@ -14,7 +14,7 @@ This code implements the algorithm described in our paper in C++.
 1. PCL
 2. gflags
 
-### Usage
+### Usages
 
 To compile the program:
 
